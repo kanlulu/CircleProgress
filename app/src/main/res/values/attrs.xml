@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--CircleProgress的自定义属性-->
+    <declare-styleable name="CircleProgress">
+        <attr name="progress" format="float" />
+    </declare-styleable>
+
+</resources>
