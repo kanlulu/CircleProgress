@@ -1,8 +1,9 @@
-# CustomView
-### 自定义View
+﻿### [自定义View](https://blog.csdn.net/qq_36046305/article/details/84852065)
+
+[我的博客地址](https://blog.csdn.net/qq_36046305/article/details/84852065)
 
 让我们先从一个简单的例子入手：
-
+![环形进度条](https://img-blog.csdnimg.cn/20181206132843588.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM2MDQ2MzA1,size_16,color_FFFFFF,t_70)
 一个简单的环形进度条，在进度条前端位置加一个白色小圆点，然后还有一个进度加载动画。
 
 首先我们分析一下这个自定义View包含了以下几个部分：
@@ -209,13 +210,9 @@ public class CircleProgress extends View {
 ```
 
 `RectF`的构造方法有四个参数，分别是`left、top、right、bottom`，这四个位置限定了我们扇形绘制的范围，它在Android坐标体系中的位置如图所示：
-
-
-
+![位置坐标体系](https://img-blog.csdnimg.cn/20181206132943928.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM2MDQ2MzA1,size_16,color_FFFFFF,t_70)
 Android坐标体系中关于角度位置的定义如图所示：
-
-
-
+![角度坐标体系](https://img-blog.csdnimg.cn/20181206133005265.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM2MDQ2MzA1,size_16,color_FFFFFF,t_70)
 3.绘制进度前端的圆点
 
 这个就是绘制一个点，关键要准确的确定点的坐标位置，这时候我们需要稍微用到一些简单的三角函数的知识，我们在园环中现在已知半径、角度和起始位置，我们就可以确定要绘制的点在圆环上的位置。
@@ -259,3 +256,4 @@ Android坐标体系中关于角度位置的定义如图所示：
 ```
 
 我们可以不延迟发起重新绘制，因为绘制一次本身就会耗费数十毫秒不等的时间。我们可以根据实际情况判断是否要设置延时的时间。
+[项目地址](https://github.com/kanlulu/CustomView)
